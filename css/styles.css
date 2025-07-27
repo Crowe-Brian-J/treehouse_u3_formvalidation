@@ -1,0 +1,96 @@
+body {
+  background: #384047;
+  font-family: sans-serif;
+}
+form {
+  background: #fff;
+  padding: 4rem 4rem 2rem;
+  max-width: 400px;
+  margin: 100px auto 0;
+  box-shadow: 0 0 1rem #222;
+  border-radius: 5px;
+}
+
+.error input {
+  border: 1px solid #ffa3a3;
+  background: #ffe5e9;
+}
+
+.valid input {
+  border: 1px solid #68b25b;
+  background: #e5f7e9;
+}
+.valid span {
+  display: none;
+}
+label {
+  display: block;
+  font-size: 1.2rem;
+  margin: 0 0 1.4rem;
+  color: #333;
+  position: relative;
+}
+input {
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  margin-top: 0.4rem;
+  outline: none;
+  background: #f5f5f5;
+  border: 1px solid #e5e5e5;
+  font-size: 1.3rem;
+  border-radius: 5px;
+  padding: 0.8rem 1rem;
+}
+
+.error::after {
+  content: ' ';
+  position: absolute;
+  top: 42px;
+  right: 16px;
+  width: 25px;
+  height: 25px;
+  background-image: url('../images/error.svg');
+  background-size: 25px;
+  transition: all 0.3s ease-out;
+}
+
+.valid::after {
+  content: ' ';
+  position: absolute;
+  top: 42px;
+  right: 16px;
+  width: 25px;
+  height: 25px;
+  background-image: url('../images/check.svg');
+  background-size: 25px;
+  transition: all 0.3s ease-out;
+}
+
+input:focus {
+  background: #fff;
+  border: 1px solid #2f558e;
+}
+span {
+  border-radius: 5px;
+  display: none;
+  font-size: 0.9rem;
+  padding-top: 0.4rem;
+  color: red;
+  text-align: right;
+}
+
+button {
+  background: #2f558e;
+  box-shadow: 0 3px 0 0 #1d3c6a;
+  border-radius: 5px;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  display: block;
+  font-size: 1.3rem;
+  outline: none;
+  margin-left: auto;
+  padding: 0.8rem 2rem;
+  text-shadow: 0 1px #68b25b;
+}
