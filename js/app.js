@@ -33,6 +33,16 @@ const validateField = (input, isValid) => {
   }
 }
 
+//live validation on input events
+const inputs = [usernameInput, emailInput, passwordInput]
+const validators = [isValidUsername, isValidEmail, isValidPassword]
+
+inputs.forEach((input, i) => {
+  input.addEventListener('input', () => {
+    validateField(input, validators[i])
+  })
+})
+
 // Add an event listener to the form listening for the submit event
 form.addEventListener('submit', (e) => {
   //from above to be more dry
