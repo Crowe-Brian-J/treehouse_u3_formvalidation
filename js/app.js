@@ -36,4 +36,12 @@ const validateField = (input, isValid) => {
 // Add an event listener to the form listening for the submit event
 form.addEventListener('submit', (e) => {
   //from above to be more dry
+  const usernameIsValid = validateField(usernameInput, isValidUsername)
+  const emailIsValid = validateField(emailInput, isValidEmail)
+  const passwordIsValid = validateField(passwordInput, isValidPassword)
+
+  //prevent default if invalid
+  if (!usernameIsValid || !emailIsValid || !passwordIsValid) {
+    e.preventDefault()
+  }
 })
