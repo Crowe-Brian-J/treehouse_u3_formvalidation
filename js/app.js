@@ -28,8 +28,7 @@ const validateField = (input, isValid) => {
     return true
   } else {
     label.classList.add('error')
-    if (span) span.style.display = 'inline'
-    return false
+    if (span) span.style.display = 'block'
   }
 }
 
